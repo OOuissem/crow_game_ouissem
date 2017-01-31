@@ -4,6 +4,10 @@ class GamesController < ApplicationController
   end
 
   def show
-    @game = Game.find params[:id]
+    begin
+      @game = Game.find params[:id]
+    rescue ActiveRecord::RecordNotFound => error
+      redirect_to "/", flash: {alert: "numero de partie de jeux "+params[:id].to_s+" introuvable"}
+    end
   end
 end
