@@ -21,7 +21,7 @@ end
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 #Use rake & thor gems for using some other Gems
-gem 'rake', '>= 11.0.0'
+gem 'rake', '>= 10.0.0'
 gem 'thor', '>= 0.18.0'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass','~> 3.3.6'
