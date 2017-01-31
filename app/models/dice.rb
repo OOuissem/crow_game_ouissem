@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: dices
+#
+#  id           :integer          not null, primary key
+#  showing_face :string
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  game_id      :integer
+#
+
 class Dice < ApplicationRecord
   belongs_to :game
 

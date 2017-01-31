@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: orchards
+#
+#  id         :integer          not null, primary key
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  game_id    :integer
+#
+
 class Orchard < ApplicationRecord
   has_many :fruits
   belongs_to :game
