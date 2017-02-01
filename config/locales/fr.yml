@@ -1,13 +1,12 @@
 fr:
   hello: "Bonjour le monde"
   games:
+    name: "Jeu du corbeau numéro"
     index:
-        title: "Liste des jeux"
-        name: "Jeu du corbeau numéro"
+        title: "Liste des jeux"        
         prec_link: "Jeux précédents"
         succ_link: "Jeux suivants"
-    show:
-        name: "Jeu du corbeau numéro"
+    show:        
         dice: "dé"
         crow: "corbeau"
         forward: "avancement"

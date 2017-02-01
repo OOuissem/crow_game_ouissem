@@ -2,7 +2,7 @@
 
 <% @games.each do |game| %>
       <div>
-        <button type='button' class="btn btn-link btn-lg active"><%=link_to t(".name") + " " + game.id.to_s, game %></button>
+        <button type='button' class="btn btn-link btn-lg active"><%=link_to t("games.name") + " " + game.id.to_s, game %></button>
       </div>
 <% end %>
 
