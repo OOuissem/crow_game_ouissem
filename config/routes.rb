@@ -4,6 +4,12 @@ Rails.application.routes.draw do
 
   root 'games#index'
 
+  #get 'games/index'
+
+  # get ':controller/:action/:id/:user_id'
+  
+  # get ':controller/:action/:id'
+
   get 'games/show'
 
   get 'games/:id', to: 'games#show', as: 'game'

@@ -2,7 +2,16 @@
 
 <% @games.each do |game| %>
       <div>
-        <%=link_to "play test", game %>
+        <%=link_to "play test" + game.id.to_s, game %>
       </div>
 <% end %>
+
+<% if @prec_is_possible %>
+      <%= link_to "Page précédente",  root_path(:page => params[:page].to_i-1)%>
+<% end %>
+<% if @succ_is_possible %>
+  <%= link_to "Page suivante",  root_path(:page => params[:page].to_i+1)%>
+<% end %>
+
+<%# link_to "Page suivante",  controller: "games", action: "index" , page: params[:page].to_i+1 %>
 
