@@ -1,18 +1,18 @@
-<h1>Jeu du corbeau</h1>
+<h1><%= t(".title") %></h1>
 
 <% @games.each do |game| %>
       <div>
-        <button type='button' class="btn btn-link btn-lg active"><%=link_to "play test" + game.id.to_s, game %></button>
+        <button type='button' class="btn btn-link btn-lg active"><%=link_to t(".name") + " " + game.id.to_s, game %></button>
       </div>
 <% end %>
 
 <br>
 <% if @prec_is_possible %>
-      <button type='button' class="btn btn-default btn-lg active"> <%= link_to "Jeux précédents",  root_path(:page => params[:page].to_i-1)%> </button>
+      <button type='button' class="btn btn-default btn-lg active"> <%= link_to t(".prec_link"),  root_path(:page => params[:page].to_i-1)%> </button>
 <% end %>
 <% if @succ_is_possible %>
-  <button type='button' class="btn btn-default btn-lg active"><%= link_to  "Jeux suivants",  root_path(:page => params[:page].to_i+1)%> </button>
+  <button type='button' class="btn btn-default btn-lg active"><%= link_to t(".succ_link"),  root_path(:page => params[:page].to_i+1)%> </button>
 <% end %>
 
-<%# link_to "Page suivante",  controller: "games", action: "index" , page: params[:page].to_i+1 %>
+<%# link_to t(succ_link),  controller: "games", action: "index" , page: params[:page].to_i+1 %>
 

@@ -1,0 +1,16 @@
+fr:
+  hello: "Bonjour le monde"
+  games:
+    index:
+        title: "Liste des jeux"
+        name: "Jeu du corbeau numéro"
+        prec_link: "Jeux précédents"
+        succ_link: "Jeux suivants"
+    show:
+        name: "Jeu du corbeau numéro"
+        dice: "dé"
+        crow: "corbeau"
+        forward: "avancement"
+        last_roll: "dernier tirage"        
+        lunch: "Lancez le Dé"
+        crow_step: "Avancez le corbeau"

@@ -1,5 +1,4 @@
-<h1>Games <%=@game.id%></h1>
-
+<h1><%= t('.name') + " " + @game.id.to_s%></h1>
 <h2>Fruits</h2>
 <%@game.fruits.on_tree.each do |fruit|%>
   <div class="fruit-<%=fruit.color%>">
@@ -7,11 +6,11 @@
   </div>
 <%end%>
 
-<h2>Dé</h2>
+<h2><%= t(".dice")%></h2>
 <div class="dice-<%=@game.dice.showing_face%>"></div>
-<p>Dernier tirage : <%=@game.dice.showing_face%></p>
-<%= button_to "Lancez le Dé", roll_dice_path %>
+<p><%= t(".last_roll")%> : <%=@game.dice.showing_face%></p>
+<%= button_to t(".lunch"), roll_dice_path %>
 
-<h2>Corbeau</h2>
-<p>Avancement : <%=@game.crow.advancement%></p>
-<%= button_to "Avancez le corbeau", crow_step_path %>
+<h2><%= t(".crow")%></h2>
+<p><%= t(".forward")%> : <%=@game.crow.advancement%></p>
+<%= button_to t(".crow_step"), crow_step_path %>

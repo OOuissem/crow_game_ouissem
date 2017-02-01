@@ -21,3 +21,17 @@
 
 en:
   hello: "Hello world"
+  games:
+    index:
+      title: "Games list"
+      name: "Crow game number"
+      prec_link: "precedent games"
+      succ_link: "next games"
+    show:
+      name: "Crow game number"
+      dice: "dice"
+      crow: "crow"
+      forward: "steps"
+      last_roll: "last roll"
+      lunch: "lunch dice"
+      crow_step: "move forward the crow"
