@@ -13,8 +13,30 @@ class Game < ApplicationRecord
   has_one :dice
   has_one :crow
   has_many :fruits, through: :orchard
+  has_and_belongs_to_many :users
 
   before_create :setup_game
+
+  def self.of_user user
+    user.games unless user.nil?
+  end
+
+  # return Game::ActiveRecord_Relation
+  # give games created at within last 7 days
+  def self.recent
+    start_range = 1.week.ago
+    stop_range = Time.now
+    self.where(created_at: [start_range..stop_range]).limit 25
+  end
+
+  def self.second_page
+    self.offset 25
+  end
+  
+  def win
+    self.status = :win
+    self.finished_at = DateTime.now
+  end
 
   # private
 

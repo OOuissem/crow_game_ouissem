@@ -1,16 +1,18 @@
-<h1><%= t('.name') + " " + @game.id.to_s%></h1>
+<h1><%= t('.name') + " " + @game.id.to_s %></h1> 
+<%= button_to "We win", game_win_path(@game.id) %>
+<%= button_to "We loose", loose_path %>
+
 <h2>Fruits</h2>
-<%@game.fruits.on_tree.each do |fruit|%>
-  <div class="fruit-<%=fruit.color%>">
-    <%= button_to "x", crop_fruit_path(fruit) %>
-  </div>
-<%end%>
+
+<%= render @game.fruits.on_tree %>
 
 <h2><%= t(".dice")%></h2>
-<div class="dice-<%=@game.dice.showing_face%>"></div>
-<p><%= t(".last_roll")%> : <%=@game.dice.showing_face%></p>
-<%= button_to t(".lunch"), roll_dice_path %>
+<%= render 'dice', showing_face: @game.dice.showing_face %>
 
-<h2><%= t(".crow")%></h2>
-<p><%= t(".forward")%> : <%=@game.crow.advancement%></p>
-<%= button_to t(".crow_step"), crow_step_path %>
+
+
+<%= render 'crow', crow: @game.crow %>
+
+
+<h2>Panier</h2>
+<%= render @game.fruits.on_basket %>

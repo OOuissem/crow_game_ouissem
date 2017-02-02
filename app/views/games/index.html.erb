@@ -1,6 +1,6 @@
 <h1><%= t(".title") %></h1>
 
-<% @games.each do |game| %>
+<% @games.to_a.each do |game| %>
       <div>
         <button type='button' class="btn btn-link btn-lg active"><%=link_to t("games.name") + " " + game.id.to_s, game %></button>
       </div>
