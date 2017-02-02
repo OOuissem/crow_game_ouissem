@@ -20,15 +20,15 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: "Hello world"  
   games:
+    alert: "Crow-game index not found"
+    name: "Crow game number"
     index:
-      title: "Games list"
-      name: "Crow game number"
+      title: "Games list"    
       prec_link: "precedent games"
       succ_link: "next games"
-    show:
-      name: "Crow game number"
+    show:      
       dice: "dice"
       crow: "crow"
       forward: "steps"
