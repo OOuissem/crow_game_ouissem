@@ -21,17 +21,24 @@
 
 en:
   hello: "Hello world"  
-  games:
-    alert: "Crow-game index not found"
+  games:    
     name: "Crow game number"
+    alert: "Crow-game index not found"
+    error_not_found: "object not found"
     index:
       title: "Games list"    
       prec_link: "precedent games"
       succ_link: "next games"
-    show:      
-      dice: "dice"
-      crow: "crow"
-      forward: "steps"
+    dice: 
+      dice_title: "dice"      
       last_roll: "last roll"
       lunch: "lunch dice"
+    crow:
+      crow_title: "crow"
       crow_step: "move forward the crow"
+      forward: "steps"
+    show:             
+      bt_win: "set game to Winned"    
+      bt_lose: "set game to lost"              
+      basket_title: "Basket"
+      

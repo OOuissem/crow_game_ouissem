@@ -3,15 +3,21 @@ fr:
   games:
     name: "Jeu du corbeau numéro"
     alert: "numero de partie jeux-de-corbeau introuvable"
+    error_not_found: "objet non trouvé"
     index:
         title: "Liste des jeux"        
         prec_link: "Jeux précédents"
-        succ_link: "Jeux suivants"
-    show:        
-        dice: "dé"
-        crow: "corbeau"
+        succ_link: "Jeux suivants"              
+    dice: 
+        dice_title: "Dé"
+        last_roll: "dernier tirage"
+        lunch: "Lancez le Dé"                 
+    crow:        
+        crow_title: "Corbeau"
+        crow_step: "avancez le corbeau"        
         forward: "avancement"
-        last_roll: "dernier tirage"        
-        lunch: "Lancez le Dé"
-        crow_step: "Avancez le corbeau"
-        error_not_found:
+    show:                    
+        bt_win: "marquer le jeu comme gagné"    
+        bt_lose: "marquer le jeu comme perdu"    
+        basket_title: "Panier"
+                   

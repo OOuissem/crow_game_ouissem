@@ -1,18 +1,22 @@
-<h1><%= t('.name') + " " + @game.id.to_s %></h1> 
-<%= button_to "We win", game_win_path(@game.id) %>
-<%= button_to "We loose", loose_path %>
+<h1><%= t('games.name') + " " + @game.id.to_s %></h1> 
+<div class="row">
+<div class="col-md-2 col-md-push-8">
+    <br><br><br><br>
+    <%= button_to t(".bt_win"), game_win_path(@game.id), class: 'btn btn-info active btn-sm' %>
+    <br><br>
+    <%= button_to t(".bt_lose"), loose_path, class: 'btn btn-info active btn-sm' %>
+</div>
+<div class="col-md-6 col-md-pull-2">
+    <h2>Fruits</h2>
 
-<h2>Fruits</h2>
+    <%= render @game.fruits.on_tree %>
 
-<%= render @game.fruits.on_tree %>
+    <%= render 'dice', showing_face: @game.dice.showing_face %>
 
-<h2><%= t(".dice")%></h2>
-<%= render 'dice', showing_face: @game.dice.showing_face %>
+    <%= render 'crow', crow: @game.crow %>
 
+    <h2><%= t(".basket_title") %></h2>
+    <%= render @game.fruits.on_basket %>
+</div>
+</div>
 
-
-<%= render 'crow', crow: @game.crow %>
-
-
-<h2>Panier</h2>
-<%= render @game.fruits.on_basket %>

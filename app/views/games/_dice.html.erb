@@ -1,3 +1,4 @@
+<h2><%= t(".dice_title")%></h2>
 <div class="dice-<%= showing_face %>"></div>
 <p><%= t(".last_roll")%> : <%= showing_face %></p>
-<%= button_to t(".lunch"), roll_dice_path %>
+<%= button_to t(".lunch"), roll_dice_path , class: 'btn btn-info active' %>

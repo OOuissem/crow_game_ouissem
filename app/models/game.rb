@@ -18,7 +18,8 @@ class Game < ApplicationRecord
   before_create :setup_game
 
   def self.of_user user
-    user.games unless user.nil?
+    Game.all
+    #user.games unless user.nil?
   end
 
   # return Game::ActiveRecord_Relation
