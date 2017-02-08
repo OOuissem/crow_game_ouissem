@@ -2,8 +2,7 @@ fr:
   hello: "Bonjour le monde"
   games:
     name: "Jeu du corbeau numéro"
-    alert: "numero de partie jeux-de-corbeau introuvable"
-    error_not_found: "objet non trouvé"
+    not_found: "numero de partie jeux-de-corbeau introuvable"   
     index:
         title: "Liste des jeux"        
         prec_link: "Jeux précédents"

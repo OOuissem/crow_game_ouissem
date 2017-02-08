@@ -23,8 +23,7 @@ en:
   hello: "Hello world"  
   games:    
     name: "Crow game number"
-    alert: "Crow-game index not found"
-    error_not_found: "object not found"
+    not_found: "Crow-game index not found"   
     index:
       title: "Games list"    
       prec_link: "precedent games"
