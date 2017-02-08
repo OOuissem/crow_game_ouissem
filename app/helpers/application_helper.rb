@@ -1,5 +1,5 @@
 module ApplicationHelper
-    BOOTSTRAP_FLASH_MSG = {
+  BOOTSTRAP_FLASH_MSG = {
     success: 'alert-success bg-success',
     error: 'alert-error bg-warning',
     alert: 'alert-block bg-danger',
