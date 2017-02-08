@@ -4,7 +4,7 @@
     <br><br><br><br>
     <%= button_to t(".bt_win"), game_win_path(@game.id), class: 'btn btn-info active btn-sm' %>
     <br><br>
-    <%= button_to t(".bt_lose"), loose_path, class: 'btn btn-info active btn-sm' %>
+    <%= button_to t(".bt_lose"), game_loose_path(@game.id), class: 'btn btn-info active btn-sm' %>
 </div>
 <div class="col-md-6 col-md-pull-2">
     <h2>Fruits</h2>

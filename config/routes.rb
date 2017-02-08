@@ -25,6 +25,8 @@ Rails.application.routes.draw do
 
   post 'games/:id/win', to: 'games#win', as: 'game_win'
 
+  post 'games/:id/loose', to: 'games#loose', as: 'game_loose'
+
   post 'loose', to: 'games#loose'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
