@@ -17,7 +17,11 @@ class Game < ApplicationRecord
 
   before_create :setup_game
 
-  scope :of_user, ->(user){user.games}
+  scope :of_user, ->(user){
+    return user.games unless user.nil?
+    Game.all  # test line
+  }
+  
   # def self.of_user user    
   #   return user.games unless user.nil?
   #   Game.all  # test line
