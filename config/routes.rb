@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   
   # get ':controller/:action/:id'
 
-  get 'games/show'
+  get 'games/index/:page', to: 'games#index'
 
   get 'games/:id', to: 'games#show', as: 'game'
 

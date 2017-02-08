@@ -17,16 +17,18 @@ class Game < ApplicationRecord
 
   before_create :setup_game
 
-  def self.of_user user
-    Game.all
-    #user.games unless user.nil?
+  def self.of_user user    
+    return user.games unless user.nil?
+    Game.all  # test line
   end
 
   # return Game::ActiveRecord_Relation
   # give games created at within last 7 days
-  def self.recent
-    start_range = 1.week.ago
-    stop_range = Time.now
+  def self.recent    
+    # start_range = 1.week.ago
+    # stop_range = Time.now    
+    stop_range = self.last.created_at    
+    start_range = stop_range - 7.days
     self.where(created_at: [start_range..stop_range]).limit 25
   end
 
